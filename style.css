@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    position: relative;
+    width: 90%;
+    height: 90%;
+    /* border: 1px solid white; */
+    /* border-radius: 20px; */
+    overflow: hidden;
+    box-shadow: 0px 5px 15px -3px ;
+}
+header::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(./img/money\ heist1.jpg) no-repeat center/cover;
+    opacity: 0.9;
+    z-index:-1;
+}
+header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #000);
+    z-index: -1;
+}
+header video {
+    position: absolute;
+    width: 120%;
+    height: 168%;
+    top: -35%;
+    right: -20%;
+    left: -10%;
+    z-index: -1;
+}
+header nav {
+    width: 100%;
+    height: 10%;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+}
+header nav .logo  {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+}
+header nav .logo a{
+    color: white;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+header nav ul li {
+    padding: 3px 15px;
+    
+}
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: .3s linear;
+    margin-left: 50px;
+}
+header nav ul li a:hover{
+    color : rgb(165, 165, 165);
+}
+
+header nav .search_user {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+header nav .search_user input{
+    padding: 6px 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(165, 165, 165);
+    margin-right: 20px;
+    color: white;
+}
+header nav .search_user input::placeholder{
+    color: white;
+    font-size: 16px;
+}
+header nav .search_user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+header nav .search_user .search {
+    position: absolute;
+    width: 320px;
+    height: 270px;
+    /* border: 1px solid white; */
+    right: 0;
+    top: 40px;
+    z-index: 9999;
+    overflow-y:auto;
+}
+header nav .search_user .search::-webkit-scrollbar {
+    width: 5px;
+    background: rgb(255, 255, 255, 0.3);
+    border-radius: 5px;
+    visibility: hidden;
+}
+header nav .search_user .search::-webkit-scrollbar-thumb {
+    width: 5px;
+    background: rgb(255, 255, 255, 0.6);
+    border-radius: 5px;
+    visibility: hidden;
+}
+header nav .search_user .search:hover::-webkit-scrollbar-thumb {
+    width: 5px;
+    background: rgb(255, 255, 255, 0.6);
+    border-radius: 5px;
+    visibility: visible;
+}
+header nav .search_user .search .card {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 3px 0px;
+    text-decoration: none;
+    display: none;
+}
+header nav .search_user .search .card::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(59, 59, 59, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    z-index:-1;
+}
+header nav .search_user .search .card img{
+   width: 28px;
+   height: 90%;
+   border-radius: 2px;
+   margin-left: 8px;
+}
+header nav .search_user .search .card .cont {
+    color: white;
+}
+header nav .search_user .search .card .cont h2 {
+    font-size: 15px;
+    margin-left: 10px;
+    line-height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 250px;
+}
+header nav .search_user .search .card .cont p{
+    font-size: 10px;
+    margin-left: 8px;
+    color: rgb(255, 255, 255, 0.8);
+
+}
+header nav .search_user .search .card .cont p span{
+    background: yellow;
+    color: #000;
+    font-weight: 800;
+    padding: 0px 2px;
+    margin: 0 5px 0 10px;
+}
+header .content {
+    position: relative;
+    color: white;
+    margin-top: 130px;
+    padding-left: 55px;
+}
+header .content h1{
+   font-size: 50px;
+   font-weight: 600;
+}
+header .content p{
+    font-size: 16px;
+    width: 500px;
+    text-align: justify;
+    margin-bottom: 5px;
+    color: whitesmoke; 
+    line-height: 20px;
+ }
+ header .content .details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+ }
+ header .content .details h6{
+    color: #df0611;
+    font-size: 15px;
+    margin-right: 10px; 
+ }
+ header .content .details h5{
+    color: greenyellow;
+    font-size: 15px;
+    margin-right: 10px;
+ }
+ header .content .details h4{
+    color: white;
+    font-size: 15px;
+    margin-right: 10px;
+ }
+ header .content .details h3 span{
+    background: yellow;
+    color: #000;
+    padding: 0px 5px;
+    font-size: 15px;
+ }
+ header .content .details h3{
+    font-size: 15px;
+ }
+ header .content btns {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+ }
+ header .content .btns a {
+    padding: 8px 20px;
+    border-radius: 10px;
+    background: #df0611;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+ }
+ header .content .btns a:hover {
+    background: #c2050f;
+    
+ }
+ 
+
+ /* section */
+
+ header section{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding: 0px 50px;
+    bottom: 20px;
+    color: white;
+ }
+ header section .cards{
+    position: relative;
+    width:100%;
+    height: 250px;
+    /* border: 1px solid white; */
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+ }
+ header section .cards::-webkit-scrollbar{
+    display: none;
+
+ }
+header section .cards .card {
+    position: relative;
+    min-width: 150px;
+    height: 200px;
+    /* border: 1px solid white; */
+    border-radius: 8px;
+    margin-right: 10px;
+    background: #000;
+    transition: .2s linear;
+}
+header section .cards .card .poster {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    position: relative;
+}
+
+header section .cards .card:hover{
+    min-width: 300px;
+    overflow: hidden;
+    transition: 0.3 linear;
+    
+}
+header section .cards .card .rest_card{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   border-radius: 8px;
+   left: 0;
+   top: 0;
+   z-index: 9999;
+   opacity: 0;
+   transition: .6s linear;
+    
+}
+header section .cards .card .rest_card img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    z-index: -1;   
+ }
+
+ header section .cards .card .rest_card .cont{
+    position: absolute;  
+    width: 100%;
+    bottom: 10px;
+    left: 0px;
+    color: white;
+    padding: 0px 20px;
+    z-index: 999999;
+ }
+ header section .cards .card .rest_card .cont .sub{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+ header section .cards .card .rest_card .cont .sub p{
+    font-size: 12px;
+    font-weight: 400;
+ }
+ header section .cards .card .rest_card .cont .sub h3{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    
+ }
+ header section .cards .card .rest_card .cont .sub span{
+    background: yellow;
+    color: #000;
+    padding: 0px 5px;
+    font-size: 15px;
+    margin-right: 5px;
+    border-radius: 2px;
+    
+ }
+
+ header section .cards .card .rest_card:hover{
+    opacity: 1;
+    
+ }
+
+ header section .left_arrow  {
+    position:absolute;
+    top: 50%;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255, 0.3);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    z-index: 99999999;
+    transition: .3s linear;
+    opacity: 0;
+ }
+ header section .right_arrow {
+    
+    position:absolute;
+    top: 50%;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255, 0.3);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    z-index: 99999999;
+    transition: .3s linear;
+    opacity: 0;
+   
+    
+ }
+ header section:hover .right_arrow {
+    opacity: 1;
+    
+ }
+ header section:hover .left_arrow {
+    opacity: 1;
+    
+ }
+
